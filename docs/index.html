@@ -1,62 +1,138 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <!-- Try opening this file on your local computer in a web browser (Firefox, Chrome, etc). 
-     * On Windows, go to the browser and type control + o and browse to find this file to open it.
-     * On Mac, go to the browser and type command + o and browse to find this file to open it. 
-     Look for the text in the <title> element in the tab above the browser search bar. Do you see it? 
-    -->
+<html lang="en">
     <head>
-        <!-- What's in the <head> element is a "meta" area not for display. 
-            It holds important information about the website's contents.
-            The text inside the <title> element does show in the top tab of a web browser. 
-             The <head> is where we will include info about styling the site, too. -->
-        <title>Starter HTML</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- Here is a place where we can add a little styling code called CSS to this page. 
-            I used it to apply a background color to the body element.
-        -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paisley's Portfolio</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
+       <!-- <style>
+        body {
+            background-color: #BC8F8F; /* RosyBrown */
+            color: #E6E6FA; /* Lavender */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        /* Image styling */
+        img {
+            border-radius: 10px;
+            max-width: 400px;
+            border: 3px solid #E6E6FA; /* Lavender border */
+            box-shadow: 0 0 12px rgba(230, 230, 250, 0.4); /* Soft lavender glow */
+        }
+
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: #E6E6FA; /* Lavender for captions */
+        }
+
+        /* -\-\- Navigation bar -\-\- */
+        nav {
+            background-color: #8B5E5E;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* -\-\- Link styles (global) -\-\- */
+        a {
+            color: #E6E6FA; /* Lavender */
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        a:hover {
+            color: #FFFFFF; /* White on hover */
+            text-shadow: 0 0 8px #E6E6FA; /* Lavender glow */
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* -\-\- Content container -\-\- */
+        .content {
+            max-width: 700px;  /* keeps text in a readable column */
+            margin: 0 auto;    /* centers it on the page */
+            text-align: left;  /* keeps paragraphs aligned neatly */
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #E6E6FA;
+            text-align: center;
+        }
+
+        code {
+            background-color: rgba(230, 230, 250, 0.1);
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>-->
     </head>
     <body>
-        <!-- CONTENT FOR DISPLAY. The <body> element holds the content we see in the display window on the web browser.-->
-        <h1>Beginning HTML</h1>
-        <nav>
-            <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="gallery.html">Gallery</a>
-            
-        </nav>
-        <h2>subheading</h2>
-        <p>Here is an example of a <a href="about.html">relative link</a> to a page inside the same folder.</p>
-        <p>Here is some sample HTML to look at. This is a body paragraph with some
-                <strong>inline</strong> code to feature some text. Here is <a
-                href="https://behrend.psu.edu/penn-state-behrend">a link to an external
-            website</a>.</p>
-        <p>One of the best resources for learning HTML is <a href="https://www.w3schools.com/html/default.asp">w3Schools</a>. 
-            Here is a reference for <a href="https://htmlcolorcodes.com/">color codes you can use for styling</a>.</p>
-        <p>Each p element is a <strong>block</strong> element designed to make a block on the
-            page.</p>
-        <h2>What are block elements good for?</h2>
-        <p>The next element after this is a ul, or <q>unordered list</q>. It makes a bulleted list.</p>
-        <ul>
-            <li>headings</li>
-            <li>paragraphs</li>
-            <li>lists</li>
-            <li>tables</li>
-            <li>images</li>
-        </ul>
         
-        <p>How about we look at an ol element, or <q>ordered</q> list? The code looks very similar to the <q>unordered</q> list. 
-            You have to see the difference by viewing in a web browser.</p>
-        <ol>
-            <li>morning</li>
-            <li>noon</li>
-            <li>afternoon</li>
-            <li>evening</li>
-            <li>night</li>
-        </ol>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="https://github.com/paisleymangold/Paisley-s-Portfolio" target="_blank">My GitHub</a>
+        </nav>
+        
+        <h1>
+            🌟 <span class="highlight-title">Welcome to Paisley's Portfolio</span> 🌟
+        </h1>
+        
+        <p style="text-align: center;">
+            Hello! I’m <strong>Paisley</strong>, and this page is where you will find my projects, resume, and all about me!
+        </p>
+        
+        <div class="content">
+            <h2>About Me</h2>
+            <p>I’m an English major with a minor in Digital Humanities at Penn State Behrend, where I’ll be graduating on May 9, 2026. I’m also the Secretary of the E-Board for PSB Competitive Cheerleading and am currently in my fourth year, with plans to attend law school the following fall.</p>
+            
+            <figure>
+                <img src="IMG_2911.JPG" alt="The Penn State Behrend Competitive Cheer Team after winning the 2024 NCA Spirit Rally Open Division">
+                <figcaption>The Penn State Behrend Competitive Cheer Team after winning the 2024 NCA Spirit Rally Open Division.</figcaption>
+            </figure>
+            
+            <h3>Intrests and Hobbies</h3>
+            <ul>
+                <li>Nurturing my Growing Collection of Houseplants</li>
+                <li>Painting and Crafting</li>
+                <li>Cheer and Dance</li>
+                <li>Spending Time with Family and Friends</li>
+            </ul>
+            
+            <h4>Favorite Projects</h4>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        
         <figure>
-            <img src="images/newt-mosaic4.png"/>
-            <figcaption>a stylized image of a firebelly newt that Dr. B made as a web logo on <a href="https://newtfire.org">newtfire.org</a></figcaption>
-        </figure> 
+            <img src="IMG_3694.JPG" alt="My German Shorthaired Pointer named Maddox. I call him Baby Bean.">
+            <figcaption>My German Shorthaired Pointer named Maddox. I call him "Baby Bean."</figcaption>
+        </figure>
+        
+      
+        <footer>
+            <p>Created by Paisley Mangold © 2025 — <a href="mailto:pzm5478@psu.edu">Contact Me</a></p>
+        </footer>
+        
     </body>
 </html>
