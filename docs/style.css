@@ -4,7 +4,7 @@ body {
   color: #e6e6fa; /* Lavender */
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  margin: 20px;
+  margin: 15px; /* slightly smaller margins */
 }
 
 /* ---- Navigation Bar ---- */
@@ -42,7 +42,7 @@ a:hover {
 
 /* ---- Content Container ---- */
 .content {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
   text-align: center;
 }
@@ -66,19 +66,37 @@ h3 {
   margin-top: 25px;
 }
 
-/* ---- GALLERY GRID ---- */
+/* ---- Gallery Grid ---- */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
   justify-items: center;
   margin-top: 20px;
 }
 
-/* ---- IMAGES ---- */
+/* ---- Highlight: First Photo Slightly Bigger ---- */
+.gallery figure:first-child {
+  grid-column: span 2; /* spans two columns */
+  max-width: 500px;    /* limits horizontal width */
+  margin: 0 auto;      /* centers it */
+}
+
+.gallery figure:first-child img {
+  width: 100%;
+  height: 300px;       /* slightly taller */
+  object-fit: cover;
+}
+
+/* ---- Specific: Artwork Row Alignment ---- */
+.gallery h3 + .gallery figure:nth-child(2) {
+  grid-column: auto; /* allows second artwork to sit next to first */
+}
+
+/* ---- Images ---- */
 .gallery img {
   width: 100%;
-  height: 250px; /* keeps photos consistent */
+  height: 250px;
   object-fit: cover;
   border-radius: 12px;
   border: 3px solid #e6e6fa;
@@ -86,21 +104,21 @@ h3 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ---- EXCEPTION: DIGIT PROJECT ---- */
+/* ---- Exception: DIGIT Project ---- */
 .gallery.digit img {
   height: auto;
-  object-fit: contain; /* show full image */
-  max-height: 600px; /* prevents it from being too tall */
+  object-fit: contain; 
+  max-height: 600px;
   width: 100%;
 }
 
-/* ---- HOVER EFFECT ---- */
+/* ---- Hover Effect ---- */
 .gallery img:hover {
   transform: scale(1.03);
   box-shadow: 0 0 18px rgba(230, 230, 250, 0.8);
 }
 
-/* ---- FIGURE & CAPTION ---- */
+/* ---- Figure & Caption ---- */
 .gallery figure {
   text-align: center;
   margin: 0;
@@ -112,7 +130,7 @@ figcaption {
   color: #e6e6fa;
 }
 
-/* ---- FOOTER ---- */
+/* ---- Footer ---- */
 footer {
   margin-top: 40px;
   font-size: 0.9em;
