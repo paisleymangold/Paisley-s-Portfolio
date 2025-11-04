@@ -4,7 +4,7 @@ body {
   color: #e6e6fa; /* Lavender */
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  margin: 15px; /* slightly smaller margins */
+  margin: 15px;
 }
 
 /* ---- Navigation Bar ---- */
@@ -55,6 +55,7 @@ h1 {
 
 h2,
 h3,
+h4,
 p,
 ul {
   text-align: left;
@@ -66,60 +67,8 @@ h3 {
   margin-top: 25px;
 }
 
-/* ---- Gallery Grid ---- */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 15px;
-  justify-items: center;
-  margin-top: 20px;
-}
-
-/* ---- Highlight: First Photo Slightly Bigger ---- */
-.gallery figure:first-child {
-  grid-column: span 2; /* spans two columns */
-  max-width: 500px;    /* limits horizontal width */
-  margin: 0 auto;      /* centers it */
-}
-
-.gallery figure:first-child img {
-  width: 100%;
-  height: 300px;       /* slightly taller */
-  object-fit: cover;
-}
-
-/* ---- Specific: Artwork Row Alignment ---- */
-.gallery h3 + .gallery figure:nth-child(2) {
-  grid-column: auto; /* allows second artwork to sit next to first */
-}
-
-/* ---- Images ---- */
-.gallery img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 3px solid #e6e6fa;
-  box-shadow: 0 0 12px rgba(230, 230, 250, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* ---- Exception: DIGIT Project ---- */
-.gallery.digit img {
-  height: auto;
-  object-fit: contain; 
-  max-height: 600px;
-  width: 100%;
-}
-
-/* ---- Hover Effect ---- */
-.gallery img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 18px rgba(230, 230, 250, 0.8);
-}
-
-/* ---- Figure & Caption ---- */
-.gallery figure {
+/* ---- FIGURE & CAPTION ---- */
+figure {
   text-align: center;
   margin: 0;
 }
@@ -130,7 +79,7 @@ figcaption {
   color: #e6e6fa;
 }
 
-/* ---- Footer ---- */
+/* ---- FOOTER ---- */
 footer {
   margin-top: 40px;
   font-size: 0.9em;
@@ -138,9 +87,40 @@ footer {
   text-align: center;
 }
 
-/* ---- Optional: Section Spacing ---- */
-h3 + .gallery {
-  margin-top: 15px;
+/* ---- GALLERY PAGE ONLY ---- */
+body.gallery-page .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+body.gallery-page .gallery figure:first-child {
+  grid-column: span 2; /* Square One spans 2 columns */
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+body.gallery-page .gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #e6e6fa;
+  box-shadow: 0 0 12px rgba(230, 230, 250, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.gallery-page .gallery.digit img {
+  height: auto;
+  object-fit: contain;
+  max-height: 600px;
+}
+
+body.gallery-page .gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px rgba(230, 230, 250, 0.8);
 }
 
 /* ---- Resume Contact Image ---- */
@@ -150,4 +130,93 @@ h3 + .gallery {
   border-radius: 10px;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.35);
   margin-left: 90px;
+}
+
+/* ---- HOMEPAGE SPECIFIC PHOTOS ---- */
+
+/* Top two photos */
+body:not(.gallery-page) .photo-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+body:not(.gallery-page) .photo-row figure {
+  width: 320px;
+  height: 320px;
+  margin: 0;
+  overflow: hidden;
+}
+
+body:not(.gallery-page) .photo-row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #e6e6fa;
+  box-shadow: 0 0 12px rgba(230, 230, 250, 0.5); /* glowing box */
+}
+
+body:not(.gallery-page) .photo-row figcaption {
+  margin-top: 8px;
+  font-style: italic;
+  color: #e6e6fa;
+}
+
+/* Bottom three photos */
+body:not(.gallery-page) .photo-layout {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+body:not(.gallery-page) .tall-photo {
+  width: 250px;
+  height: 375px;
+  overflow: hidden;
+}
+
+body:not(.gallery-page) .tall-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #e6e6fa;
+  box-shadow: 0 0 12px rgba(230, 230, 250, 0.5); /* glowing box */
+}
+
+body:not(.gallery-page) .tall-photo figcaption {
+  margin-top: 8px;
+  font-style: italic;
+  color: #e6e6fa;
+}
+
+body:not(.gallery-page) .stacked-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body:not(.gallery-page) .stacked-photos figure {
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+}
+
+body:not(.gallery-page) .stacked-photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #e6e6fa;
+  box-shadow: 0 0 12px rgba(230, 230, 250, 0.5); /* glowing box */
+}
+
+body:not(.gallery-page) .stacked-photos figcaption {
+  margin-top: 8px;
+  font-style: italic;
+  color: #e6e6fa;
 }
